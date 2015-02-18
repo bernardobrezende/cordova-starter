@@ -1,0 +1,7 @@
+*.log
+node_modules
+bower_components
+platforms
+plugins
+libs
+.DS_Store

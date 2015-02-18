@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Cordova Starter</title>
+    </head>
+    <body ng-controller="homeController" ng-init="heading = 'Hello Cordova!'">
+
+        <h2>{{ ::heading }}</h2>
+
+		<!-- LIB -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>        
+        <script type="text/javascript" src="assets/libs/angular-local-storage/dist/angular-local-storage.min.js"></script>
+        
+        <!-- POLYFILLS -->
+        <script type="text/javascript" src="app/shared/polyfill/cordovaHTTP.js"></script>
+
+        <!-- APP INITIALIZER -->
+        <script type="text/javascript" src="assets/js/appBootstrap.js"></script>
+        <script type="text/javascript" src="app/app.module.js"></script>
+
+        <!-- CONSTANTS -->
+        <script type="text/javascript" src="app/app.constants.js"></script>
+        <script type="text/javascript" src="app/app.messages.js"></script>
+        
+        <!-- SERVICES -->
+        <script type="text/javascript" src="app/shared/format/formatterService.js"></script>
+        <script type="text/javascript" src="app/shared/validation/validationService.js"></script>
+        <script type="text/javascript" src="app/shared/notification/notificationService.js"></script>
+        <script type="text/javascript" src="app/shared/storage/storageService.js"></script>
+        <script type="text/javascript" src="app/shared/device/deviceService.js"></script>
+        <script type="text/javascript" src="app/sections/login/authService.js"></script>
+        <script type="text/javascript" src="app/sections/login/loggedCustomerService.js"></script>
+
+        <!-- INTERCEPTORS -->
+        <script type="text/javascript" src="app/shared/http/httpInterceptor.js"></script>
+
+        <!-- DIRECTIVES -->
+
+        <!-- CONTROLLERS -->
+        <script type="text/javascript" src="app/sections/home/homeController.js"></script>
+        
+        <script>
+            appBootstrap.initialize();
+        </script>
+    </body>
+</html>
